@@ -1,0 +1,37 @@
+PRROGA START 0000
+       USE DEFAULTB      
+       LDA =C'A'          0
+       +LDB #RESULT          3
+       BASE RESULT      
+       ADD WOD          7
+       LDT #256          A
+       USE      
+       TIO          0
+      MULR A,X          1
+      USE DEFAULTB      
+      CADD A,WOD,Z          D
+      +LDA GAMMA          11
+      J @RETADRR          15
+      USE CDATA      
+      LTORG          0
+      USE DEFAULTB      
+     CSUB A,GAMMA, N          18
+     USE CDATA      
+WOD WORD 5          1
+    GAMMA BYTE X'02'          4
+    USE DEFAULTB      
+    COMP RESULT          1C
+    CLOAD T,DATA,C          1F
+    CSTORE T, RESULT,Z          23
+    CJUMP LENGTH,N          27
+    STA =X'07'          2B
+    USE CDATA      
+    DATA WORD 5          5
+    USE CBLKS      
+    BUFFER RESB 10          0
+    RETADRR RESB 4096          A
+    RESULT RESW 1          100A
+    USE CDATA      
+    LENGTH BYTE X'FF'          8
+    LTORG
+    END 0000

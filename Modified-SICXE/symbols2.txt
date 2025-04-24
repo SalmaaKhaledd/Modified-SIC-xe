@@ -1,0 +1,11 @@
+Label               Location            Block No  
+==================================================
+WOD                 0032                2         
+GAMMA               0035                2         
+DATA                0036                2         
+BUFFER              003B                3         
+RETADRR             0045                3         
+RESULT              1045                3         
+LENGTH              0039                2         
+C'A'                0031                2         
+X'07'               003A                2         
